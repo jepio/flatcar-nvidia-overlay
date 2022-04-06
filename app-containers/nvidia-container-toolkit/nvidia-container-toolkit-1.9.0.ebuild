@@ -45,7 +45,7 @@ src_compile() {
 }
 
 src_install() {
-	dobin "${PN}"
+	dobin "${PN}" "${PN/toolkit/runtime}"
 	into "/usr/bin"
 	dosym "${PN}" "/usr/bin/nvidia-container-runtime-hook"
 	insinto "/etc/nvidia-container-runtime"
